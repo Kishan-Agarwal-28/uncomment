@@ -1,0 +1,647 @@
+# Languages are matched by file extension.
+# Add your own entries here or supply a --langs file at runtime.
+# Rules are: line_comments, block_comments, strings.
+# String delimiters: longer ones are tried first (""" before ").
+
+# ── C-family ──────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "C / C++"
+extensions = ["c", "h", "cpp", "cc", "cxx", "hpp", "hxx"]
+line_comments = ["//"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+char_literal = true  # C char literals: 'x', '\n', '\0' etc.
+
+# ── Rust ──────────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "Rust"
+extensions = ["rs"]
+line_comments = ["//"]
+block_comments = [["/*", "*/"]]
+raw_strings = true
+
+[[language.strings]]
+open = "\"\"\""
+close = "\"\"\""
+escape = false
+multiline = true
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+char_literal = true  # prevents 'a lifetime annotations from being misread
+
+# ── JavaScript / TypeScript ───────────────────────────────────────────────────
+
+[[language]]
+name = "JavaScript"
+extensions = ["js", "mjs", "cjs"]
+line_comments = ["//"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "`"
+close = "`"
+escape = true
+multiline = true
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+[[language]]
+name = "TypeScript"
+extensions = ["ts", "tsx", "mts", "cts"]
+line_comments = ["//"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "`"
+close = "`"
+escape = true
+multiline = true
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+[[language]]
+name = "JSX"
+extensions = ["jsx"]
+line_comments = ["//"]
+block_comments = [["/*", "*/"], ["{/*", "*/}"]]
+
+[[language.strings]]
+open = "`"
+close = "`"
+escape = true
+multiline = true
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+# ── Go ────────────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "Go"
+extensions = ["go"]
+line_comments = ["//"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "`"
+close = "`"
+escape = false
+multiline = true
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+# ── Java / Kotlin ─────────────────────────────────────────────────────────────
+
+[[language]]
+name = "Java"
+extensions = ["java"]
+line_comments = ["//"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+char_literal = true
+
+[[language]]
+name = "Kotlin"
+extensions = ["kt", "kts"]
+line_comments = ["//"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "\"\"\""
+close = "\"\"\""
+escape = false
+multiline = true
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+# ── C# ───────────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "C#"
+extensions = ["cs"]
+line_comments = ["//"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "@\""
+close = "\""
+escape = false
+multiline = true
+
+[[language.strings]]
+open = "\"\"\""
+close = "\"\"\""
+escape = false
+multiline = true
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+# ── Swift ─────────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "Swift"
+extensions = ["swift"]
+line_comments = ["//"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "\"\"\""
+close = "\"\"\""
+escape = true
+multiline = true
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+# Swift has no char literals — single-quoted strings intentionally omitted
+
+# ── Python ───────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "Python"
+extensions = ["py", "pyi"]
+line_comments = ["#"]
+
+# Triple-quoted strings — also used as docstrings / block comments
+[[language.strings]]
+open = "\"\"\""
+close = "\"\"\""
+escape = false
+multiline = true
+
+[[language.strings]]
+open = "'''"
+close = "'''"
+escape = false
+multiline = true
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+# ── Ruby ──────────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "Ruby"
+extensions = ["rb"]
+line_comments = ["#"]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+# ── Shell ─────────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "Shell"
+extensions = ["sh", "bash", "zsh", "fish"]
+line_comments = ["#"]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = false
+multiline = false
+
+# ── Perl ──────────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "Perl"
+extensions = ["pl", "pm"]
+line_comments = ["#"]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+# ── Lua ───────────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "Lua"
+extensions = ["lua"]
+line_comments = ["--"]
+block_comments = [["--[[", "]]"]]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+# ── SQL ───────────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "SQL"
+extensions = ["sql"]
+line_comments = ["--"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+# ── Haskell ───────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "Haskell"
+extensions = ["hs", "lhs"]
+line_comments = ["--"]
+block_comments = [["{-", "-}"]]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+# ── HTML / XML ───────────────────────────────────────────────────────────────
+
+[[language]]
+name = "HTML"
+extensions = ["html", "htm"]
+block_comments = [["<!--", "-->"]]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = false
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = false
+multiline = false
+
+[[language]]
+name = "XML"
+extensions = ["xml", "svg", "xsl", "xslt"]
+block_comments = [["<!--", "-->"]]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = false
+multiline = false
+
+# ── CSS / SCSS / Less ─────────────────────────────────────────────────────────
+
+[[language]]
+name = "CSS"
+extensions = ["css"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+[[language]]
+name = "SCSS"
+extensions = ["scss", "sass"]
+line_comments = ["//"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+[[language]]
+name = "Less"
+extensions = ["less"]
+line_comments = ["//"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+# ── Config formats ────────────────────────────────────────────────────────────
+
+[[language]]
+name = "TOML"
+extensions = ["toml"]
+line_comments = ["#"]
+
+[[language.strings]]
+open = "\"\"\""
+close = "\"\"\""
+escape = false
+multiline = true
+
+[[language.strings]]
+open = "'''"
+close = "'''"
+escape = false
+multiline = true
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = false
+multiline = false
+
+[[language]]
+name = "YAML"
+extensions = ["yaml", "yml"]
+line_comments = ["#"]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = false
+multiline = false
+
+[[language]]
+name = "R"
+extensions = ["r"]
+line_comments = ["#"]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+# ── PHP ───────────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "PHP"
+extensions = ["php"]
+line_comments = ["//", "#"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+# ── Scala ─────────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "Scala"
+extensions = ["scala", "sc"]
+line_comments = ["//"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "\"\"\""
+close = "\"\"\""
+escape = false
+multiline = true
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+# ── Elixir ───────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "Elixir"
+extensions = ["ex", "exs"]
+line_comments = ["#"]
+
+[[language.strings]]
+open = "\"\"\""
+close = "\"\"\""
+escape = true
+multiline = true
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
+
+# ── Dart ──────────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "Dart"
+extensions = ["dart"]
+line_comments = ["//"]
+block_comments = [["/*", "*/"]]
+
+[[language.strings]]
+open = "\"\"\""
+close = "\"\"\""
+escape = true
+multiline = true
+
+[[language.strings]]
+open = "'''"
+close = "'''"
+escape = true
+multiline = true
+
+[[language.strings]]
+open = "\""
+close = "\""
+escape = true
+multiline = false
+
+[[language.strings]]
+open = "'"
+close = "'"
+escape = true
+multiline = false
