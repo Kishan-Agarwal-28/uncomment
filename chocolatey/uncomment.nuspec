@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>uncomment</id>
+    <version>0.1.0</version>
+    <title>uncomment</title>
+    <authors>Kishan Agarwal</authors>
+    <projectUrl>https://github.com/Kishan-Agarwal-28/uncomment</projectUrl>
+    <tags>uncomment cli rust</tags>
+    <summary>A CLI tool to uncomment code.</summary>
+    <description>A CLI tool to uncomment code, built in Rust.</description>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
