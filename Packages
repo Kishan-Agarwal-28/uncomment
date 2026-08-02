@@ -1,0 +1,40 @@
+Package: uncomment
+Version: 0.1.0-1
+Architecture: amd64
+Installed-Size: 1349
+Depends: libc6 (>= 2.34)
+Filename: pool/main/uncomment_0.1.0-1_amd64.deb
+Size: 462880
+MD5sum: c5be2ebe3f1640c01bf3dbf16402d7c4
+SHA1: b291c312a34d7a210d55730434a42264a0955153
+SHA256: 5dd044f04d220d7cf9f04fbff687ebae089517659b2bbac482f48126ef516f5a
+Priority: optional
+Description: [generated from Rust crate uncomment]
+ # uncomment
+ .
+ A CLI tool to uncomment code.
+ .
+ ## Installation
+ .
+ ### Windows (Chocolatey)
+ ```powershell
+ choco install uncomment
+ ```
+ .
+ ### macOS / Linux (Homebrew)
+ ```bash
+ brew tap Kishan-Agarwal-28/homebrew-tap
+ brew install uncomment
+ ```
+ .
+ ### Debian / Ubuntu (apt)
+ ```bash
+ echo "deb [trusted=yes] https://Kishan-Agarwal-28.github.io/uncomment/ ./" |
+ sudo tee /etc/apt/sources.list.d/uncomment.list
+ sudo apt update
+ sudo apt install uncomment
+ ```
+ .
+ ## License
+ MIT
+
